@@ -1,0 +1,244 @@
+.HideCart {
+    display: none;
+    transition: 2s;
+}
+.backdrop{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #0000008c;
+    overflow-y: auto;
+}
+.ShowCart {
+    display: block;
+    transition: 2s;
+    width: 500px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+}
+
+.sideRight {
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+    overflow-y: auto;
+    background-color: #00000070;
+    transition: 2s;
+    border: 1px solid #e9e9e9;
+}
+
+.btn.btn-close.cart {
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+}
+
+.cart-container>p {
+    font-family: 'Karla', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 32px;
+    font-style: normal;
+    text-align: left;
+    color: #221f20;
+}
+
+.cart-container>p>span {
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    font-style: normal;
+    text-align: left;
+    color: #221f20;
+}
+
+.eachItem {
+    margin: 1rem 0;
+    position: relative;
+    border-bottom: 1px solid gray;
+
+}
+
+.eachItem:last-child {
+    border-bottom: 0px;
+}
+
+.product-desc {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.cart-product-quantity {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100px;
+    border: 1px solid;
+    margin-bottom: 0.6rem;
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    border: 1px solid #80808057;
+}
+
+.cart-product-quantity button {
+    border: none;
+    padding: 0 0.8rem;
+    background: none;
+}
+
+.cart-product-total-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart-product-total-price>p {
+    margin-bottom: 0.6rem;
+}
+
+.cart-each {
+    display: flex;
+    /* align-items: center; */
+    column-gap: 3rem;
+    justify-content: space-around;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.cart-each img {
+    width: 90px;
+    max-width: 100%;
+    display: block;
+    margin-right: 1rem;
+}
+
+.cart-summery {
+    padding: 1rem 2rem;
+    display: flex;
+    background-color: #EFF5F7;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1.5px solid #484848d4;
+}
+
+.checkOut+p {
+    font-family: 'Karla', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19px;
+    font-style: normal;
+    text-align: center;
+    color: #221f20;
+}
+
+.checkOut {
+    font-family: 'Karla', sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 0.71rem;
+    line-height: 13px;
+    font-style: normal;
+    text-align: center;
+
+    width: 100%;
+}
+
+.sub-total {
+    display: flex;
+    justify-content: space-between;
+    line-height: 2.5;
+}
+
+.sub-total>span {
+    font-family: 'Karla', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 52px;
+    font-style: normal;
+    text-align: left;
+    color: #221f20;
+}
+
+
+@media screen and (max-width: 600px) {
+    .ShowCart {
+        width: auto;
+    }
+
+    .btn.btn-close.cart {
+        right: 1rem;
+        top: 1rem;
+    }
+
+}
+
+.cart-container {
+    font-weight: 600;
+    /* font-style: italic; */
+    letter-spacing: 1px;
+}
+
+.page-logo {
+    width: 179px;
+    margin-bottom: 1.8rem;
+}
+
+.header-desc>h1 {
+    font-family: 'Karla', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+    font-style: normal;
+    text-align: center;
+    color: #122230;
+}
+
+.header-desc>p {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-style: normal;
+    text-align: center;
+    color: #7d7d7d;
+    margin: auto;
+}
+
+.cart-title h3 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.cart-item {
+    border-top: 1px solid;
+    margin-top: 0.5rem;
+}
+
+.product-desc h3,
+.product-desc button {
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    line-height: 1.5;
+    background: none;
+    margin: 0;
+}
+
+
+
+
+.clear-cart {
+    font-weight: 600px;
+
+}
