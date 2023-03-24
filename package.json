@@ -1,7 +1,7 @@
 {
   "name": "hulkappproduct",
   "version": "0.1.0",
-  "homepage": "https://arwebshark.com/praellatask",
+  "homepage": "/praellatask",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
