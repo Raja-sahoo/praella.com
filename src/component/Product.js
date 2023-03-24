@@ -6,7 +6,7 @@ import { Cart } from "./Cart"
 import "./product.css"
 export const Product = () => {
   const { totalCartQuantity } = useSelector(state => state.cartSli)
-
+//   useSelector have the access to the state so it can fetch the desired data then we can use that
 
   const [data, showData] = useState([])
   const [isShown, setShown] = useState(false)
@@ -15,15 +15,19 @@ export const Product = () => {
       .then((res) => res.json())
       .then((data) => showData(data.products))
   }, [])
+//   using fetch call method fetch the data from json inside the usecallback hook 
   useEffect(() => {
     loadJsonData()
   })
-  const FourData = data.filter((object, index) => index < 4)
+//   for side effect handelling & at initial load use effect will fetch the data 
+  const FourData = data.filter((object, index) => index < 4) 
+  //replace 4 with desiered number then we can see other products also SO the FourData have the 4 object that we filtered from long array of object
+  
   const dispatcH = useDispatch()
   const handelAddtoCart = (item) => {
     dispatcH(addToCart(item))
   }
-
+// useDispatch method dispatches addToCart action to the redux store with argument means our object, here it take item as arguemnt after setting Json data to the  data state 
 
   const CartShow = (e) => {
     setShown(true)
@@ -31,6 +35,7 @@ export const Product = () => {
   const closeCart = () => {
     setShown(false)
   }
+//   the above 2 function written for toggeling of the sidebar cart 
 
   return (
     <>
@@ -76,6 +81,7 @@ export const Product = () => {
         }
 
 
+        {/* here we have used our cart component for clean separation  */}
         <div className='sideRight'>
         <div className={isShown ? "backdrop": "" }></div>
           <div className={isShown ? "ShowCart" : "HideCart"}>
