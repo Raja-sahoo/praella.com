@@ -1,10 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
+// I have used toast for the sweet alert 
 const initialState = {
     cartItem: localStorage.getItem("cartItem") ? JSON.parse(localStorage.getItem("cartItem")) : [],
     totalCartQuantity: 0,
     cartTotalAmount: 0
 }
+// initialState is our start state which is empty [] after after addTocart click action from product.js then it will get updated & stored in local storage after parse
+// here creatslice method taken 3 properties, 1st one is name of the slice, 2nd one is state, 3rd is the reducer, inside reducer the all event action method called,
+//each function taken 2 argument one is state which is our initialState data, & action performed to updated the state 
+
 const cartSlice = createSlice({
     name: "CartSlice",
     initialState,
@@ -73,5 +78,6 @@ const cartSlice = createSlice({
 
     }
 })
+// here all action exported after destructred & also reducer exported below
 export const { addToCart, removeFromCart, decreaseCartClick, clearCartBtn, GetcartTotal } = cartSlice.actions;
 export default cartSlice.reducer; 
